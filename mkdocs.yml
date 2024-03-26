@@ -1,4 +1,4 @@
-site_name: "FRINK Landing zone"
+site_name: "READDI-AC Data Management Guide"
 theme:
   name: material
   palette:
@@ -14,7 +14,15 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 nav:
-  - Upload Guide: index.md
-  - KG Status: kg-status.md
-site_url: https://frink-okn.github.io/frink-landing-zone/
-repo_url: https://github.com/frink-okn/frink-landing-zone/
+  - Site Description: index.md
+  - READDI-AC Data Stewardship: datastewardship.md
+  - Data Management Timeline: datamgmt_timeline.md
+  - Understanding CDD Vault: cddvault.md
+  - Data Upload Guide: data-upload_guide.md
+  - Contact Us: contact_us.md
+
+extra_css:
+  - custom.css
+
+site_url: https://lmaefos.github.io/datamgmtguide_READDI-AC/
+repo_url: https://github.com/lmaefos/datamgmtguide_READDI-AC
