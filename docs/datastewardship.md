@@ -7,4 +7,4 @@ The Data Stewardship team consists of committed project staff who provide suppor
 + **Readout and Variable Mapping Support in CDD Vault:** The group assists with crucial data mapping activities, ensuring accurate data tagging and alignment, which are essential for meaningful data analysis and interpretation.
 + **User Role Clarification and Protocol Support:** Stewards help delineate specific user role requirements and provide expert assistance for inquiries related to current protocols, fostering a clear understanding and smooth operation within the project.
 
-For personalized support, the site offers a RENCI/READDI Stewards Consultation [Contact Us](docs/contact_us.md) form.
+For personalized support, the site offers a RENCI/READDI Stewards Consultation [Contact Us](contact_us.md) form.

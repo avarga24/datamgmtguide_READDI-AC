@@ -5,6 +5,8 @@ This section will provide guidance on understanding CDD Vault's structure.
 
 [![CDD Vault Structure](assets/images/cddvaultdiagram.png)](https://drive.google.com/file/d/1bdmoXYiBd2b4GIhLZ9lG4Bn7eD8qrTtM/view?usp=drive_link)
 
+When it's ready **View a recording of the CDD Vault UNC READDI: Kick-Off**
+
 ## Understanding Projects
 In the context of READDI-AC, a CDD <span class="button-text-blue">**Project**</span> serves as a shared space where team members can access and collaborate on data sets that are interconnected. Think of it as a designated area within a digital library, where all the research data relevant to a specific subject or collaborative effort is stored and managed. This organization aids in streamlining collaboration and ensuring that pertinent data is easily accessible and shareable among those who need it.
 
