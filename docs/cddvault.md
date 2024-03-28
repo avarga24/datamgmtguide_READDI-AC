@@ -59,7 +59,12 @@ In the context of the READDI-AC project, protocols within the CDD Vault serve as
 
 Defining readouts within CDD Vault protocols has **three key options:**
 
-+ **Readout Definition:** This is the primary method we'll use, capturing specific data points or measurements from an assay.
++ **Readout Definition:** This is the primary method we'll use, capturing specific data points or measurements from an assay. This readout type allows users to specify the data type they are uploading:
+    + **Number**: the most common data type for HTS data. Only numeric values with modifiers (>, <, >=, <=) are permitted. This means that things like N/A or "precipitated" are not allowed. 
+    + **Text**: alphanumeric values are permitted. Qualitative results and hyperlinks should also be entered as this data type.
+    + **Pick List**: a predefined list of alphanumeric values that may be entered for this readout. Gives the protocol owner the ability to control the values that are imported into the vault. Data such as phenotypes, descriptions, cell lines etc. should be defined as pick lists. Note, that you cannot calculate across pick-list values! Learn more about pick lists.
+    + **Batch Link**: allows linking Batch records to other entities stored in the same or across separate CDD Vaults (if the Link Across Vaults feature is enabled for your CDD Account).
+    + **File**: file attachments of any file type and size.  Image previews will be generated for JPG, GIF, BMP, PNG, TIFF and PDF formats. All other files will be available for download to view with their native software.
 
 + **Calculated Readout Definition:** Useful when you need to derive averages or other statistical measures from raw data, or when initial values like EC50 are not available.
 
