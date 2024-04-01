@@ -93,6 +93,8 @@ This level of detail helps you pinpoint exactly how different variables affect y
 ## Understanding Runs
 A run signifies a distinct instance of an experiment guided by a specific protocol, encapsulating the unique data derived from each assay execution in the lab. Whenever you conduct an experiment following a protocol and upload its results to CDD Vault, you create a run tied to that protocol. Multiple experiments carried out on the same day under identical conditions can each be logged as separate runs within the same protocol, a system feature that ensures meticulous data organization and facilitates precise tracking of experimental details and outcomes.
 
+Runs are organized by date, and you may back-date it, if you are importing data several days after performing the actual experiment. The best practice is that the run date you add to your CDD Vault matches the experiment date in your lab notebook.
+
 [![runs](assets/images/multipleruns.png)](https://support.collaborativedrug.com/hc/en-us/articles/214359683-Importing-data-for-several-runs-on-the-same-day)
 
 [CDD Vault Runs Knowledge Base link](https://support.collaborativedrug.com/hc/en-us/articles/214359683-Importing-data-for-several-runs-on-the-same-day) (run)

@@ -145,9 +145,40 @@ Calculations are defined as new readouts in existing protocols, based on previou
 ![CDD Vault Calculation Example](assets/images/add_calculation_example.png)
 
 ## Step-by-step guide on importing your data
+**Before iniating the upload process, ensure that the following conditions have been met:**
 
-### Readout assignment
-Guide on assigning and mapping a readout goes here
++ ✓ A protocol exists in the system with the appropriate readouts assigned
+    + For instructions on creating a new protocol, click [here](#setting-up-a-protocol) 
++ ✓ Your data set is in a long-skinny format. 
+    + For assistance with transforming your dataset into a long-sknny format, click [here](#dataset-transformation)
+
+[Contact a READDI Steward](contact_us.md) if you're having issues with any of these pre-requesites. 
+
+### Tabular data 
+
++ **Step 1**: Choose data file (and project). Note that at the very minimum, your file should contain structures and required batch fields. 
++ **Step 2**: On the Import Data tab, upload your import file and choose your project. Make sure to select the right project, or the protocol name will not be available for mapping in the next step.
+    ![CDD Vault readout types](assets/images/import_data_tab.png)
++ **Step 3**: Map fields. Make sure that the "Add readouts (protocol data) only" option is selected.
+    + _**If applicable** step_: Map the plate and well columns. When a column in the file preview pane is highlighted, CDD Vault will make an attempt to guess your mapping based on the provided file header. If the guess is correct, all you have to do, is click "apply". If the guess is not correct, change the mapping in the section below the file preview pane.  
+    ![CDD Vault readout types](assets/images/best guess.png)
++ **Step 4**: Map assay data. All assay data is mapped under the **Readouts (Protocol Data) section**. When this is selected there is a series of drop-downs that appear each time you make a selection. Note that if CDD Vault could not provide a best guess for the mapping, "**Do not import**" is automatically selected. Change "**Do not import**" to "**Protocols (Readout Data)**" option. Select the appropriate readout definition from the drop-down.
+    ![CDD Vault readout types](assets/images/protocol mapping1.png)
++ **Step 5**: Click on **Create a new run** and fill the form. The data from the import file is going to be added to a new [**run**](cddvault.md/#understanding-runs) of a protocol. Ensure to describe any relevant info about the data in the "Conditions" section. 
+    + _**If applicable** step_: Upload related files in this step (e.g. graphs, images, etc.). You'll see an option to attach additional files.  
++ **Step 6**: Click on **Create this run**, and then finalize the mapping by clicking **Apply** 
+    + _**If applicable** step_: Repeat the steps 3 to 6 to map other variables in the same input dataset. 
++ **Step 7**: Click on **Process File**. You'll see a yellow progress bar at the top which will provide an indication how the the initial import is progressing. Once the initial stage is completed, you will see a QC or import validation report.
+    
+    ![CDD Vault readout types](assets/images/process_file.png)
+
++ **Step 8**: Review the QC import validation report, this report will give clues if something is invalid. At this stage the data have not been written into your vault, and you may simply "reject" or cancel the entire import, or any of the events you see. Once the file is "committed", it means the import is finalized and it is more difficult to undo (though not impossible). 
++ **Step 9**: If the report looks promising, click on **Commit Data Import**. When the commit step is finished, the import report will update one more time, providing quick links to review, QC or visualize the data.
+    + **If in doubt: REJECT Data Import**. You can always start the import again without much work, but it may take some work to delete all of the erroneously entered data after it's committed.
++ **Step 10**: When the import is finished, review the newly updated data by navigating to the **Run Page**--> **Data Summary** tab. 
+
+### Non-tabular data (not associated with tabular data)
+Insert instructions on uploading non-tabular data that is not associated with tabular data. 
 
 ## Dataset transformation
 Guide on transforming dataset into skinny format goes here
