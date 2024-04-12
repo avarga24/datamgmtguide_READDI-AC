@@ -14,7 +14,7 @@ For READDI-AC, there is one primary <span class="button-text-blue">**Project**</
 
 However, we understand that some labs may handle sensitive or proprietary data that requires additional confidentiality due to legal or intellectual property considerations. In such instances, READDI-AC is prepared to establish dedicated <span class="button-text-blue">**Project**</span> for these labs. These specialized <span class="button-text-blue">**Project**</span> will have enhanced restrictions to safeguard the sensitive data, ensuring that it is only accessible to authorized personnel and that it complies with any legal restrictions. This approach allows labs to participate fully in the collaborative environment of READDI-AC while maintaining the necessary level of data protection and compliance.
 
-When you first log into CDD Vault, your access and navigational options will depend on your role. Vault administrators can view and manage all project memberships and are responsible for granting access to the necessary <span class="button-text-blue">**Project**</span>. If you need access to any specific <span class="button-text-blue">**Project**</span> or if you are handling sensitive data and require a separate <span class="button-text-blue">**Project**</span> setup, please reach out to Ava at...[need confirmation that this goes to Ava]. They will ensure that you have the right access and that any special data handling needs are met.
+When you first log into CDD Vault, your access and navigational options will depend on your role. Vault administrators can view and manage all project memberships and are responsible for granting access to the necessary <span class="button-text-blue">**Project**</span>. If you need access to any specific <span class="button-text-blue">**Project**</span> or if you are handling sensitive data and require a separate <span class="button-text-blue">**Project**</span> setup, please reach out to Ava by [filling out this form](contact_us.md) where you can indicate any special data handling needs.
 
 [CDD Vault Project Knowledge Base link](https://support.collaborativedrug.com/hc/en-us/articles/214357843-1-Logging-in-and-navigation#first_project) (what is a Project)
 
@@ -48,9 +48,9 @@ As a data uploader or investigator within the READDI-AC project, understanding t
 
 + **Molecule Registration:** Data uploaders are not required to register molecules directly. The molecular structures typically associated with the READDI-AC project, including those used in various assays across different labs, have already been imported and registered within the system. This foundational step ensures that all subsequent data associated with these molecules are accurately captured and cataloged.
 
-+ **Molecule IDS and SMILES Strings:** Each molecule within the project is assigned a unique identifier (Molecule ID), often represented using a SMILES string. This standardized chemical notation allows for the unequivocal identification of molecule structures, facilitating their easy retrieval and analysis within the CDD Vault. _**When preparing datasets for upload, ensure that there is a dedicated column for Molecule IDs, linking each data point distinctly to its corresponding molecule.**_
++ **Molecule IDS and SMILES Strings:** Molecules have a unique READDI Batch ID following the format of RA-XXXXXXX-XX, which can be registered with a structure (SMILES string) or structure-blinded. When preparing datasets for upload, **ensure that there is a dedicated column for READDI IDs**, linking each data point distinctly to its corresponding “RA” number.
 
-+ **Handling Unrecognized Molecule IDs:** In instances where the CDD Vault flags an unrecognized Molecule ID during data upload or analysis, it is vital to address this promptly to maintain data integrity. Should you encounter such a notification, please reach out to our Stewardship team through this link. Our team is equipped to assist in troubleshooting and resolving any issues with molecule IDs, ensuring seamless integration and analysis of your data within the platform.
++ **Handling Unrecognized Molecule IDs:** If CDD Vault flags an unrecognized READDI ID during data upload or analysis, it is vital to address this promptly. Please reach out to our Stewardship team and include Anwar Hossain (anwar.hossain@unc.edu) to investigate. Our team is equipped to assist in troubleshooting and resolving any issues with molecule IDs, ensuring seamless integration and analysis of your data within the platform.
 
 ## Understanding Readouts
 [![Readouts](assets/images/CDDVault_readouts.jpg)](https://drive.google.com/file/d/1bdWfgTbW1sFz8MAd3yQrPOfQ7PtFgw6W/view?usp=drive_link)
@@ -66,16 +66,16 @@ Defining readouts within CDD Vault protocols has **three key options:**
     + **Batch Link**: allows linking Batch records to other entities stored in the same or across separate CDD Vaults (if the Link Across Vaults feature is enabled for your CDD Account).
     + **File**: file attachments of any file type and size.  Image previews will be generated for JPG, GIF, BMP, PNG, TIFF and PDF formats. All other files will be available for download to view with their native software.
 
-+ **Calculated Readout Definition:** Useful when you need to derive averages or other statistical measures from raw data, or when initial values like EC50 are not available.
++ **Calculated Readout Definition:** Useful when you need to derive averages or other statistical measures from existing Readouts in the protocol, like ‘Average % Inhibition’ either within or across runs.
 
-+ **Dose-Response Calculation:** Employed for analyzing data across a range of concentrations or doses to determine the effect curve, typically using the Hill equation.
++ **Dose-Response Calculation:** Employed for analyzing data that is uploaded as individual x- and y-axis datapoints with a range of concentrations or doses to determine values like IC50, IC90 or CC50, typically using the Hill equation.
 
 [CDD Vault Readouts Knowledge Base link](https://support.collaborativedrug.com/hc/en-us/articles/214357903-Glossary-of-common-terms#readout_definition) (readouts)
 
 ### Understanding Conditions
-In addition to the three options, a readout can be assigned as a condition. Indicating that a readout is a condition is a way to categorize and analyze data based on specific variables, much like filters. Let's say you're running drug tests on cells from different species and using various cell lines to compare how different conditions affect the results. Each test is tagged with these conditions, like the species and cell line used.
+CDD Vault allows researchers to manage varying experimental conditions within a single assay protocol, such as cell line, expression type, and species. Instead of creating multiple protocols for each variation, a single protocol can be used to handle different conditions simultaneously. This approach enables the averaging and calculation of results based on these conditions. When a protocol readout definition is designated as a condition, it categorizes related results for calculated readout definitions within that protocol, enhancing data organization and analysis efficiency.
 
-When you want to analyze the data, CDD Vault can calculate results, such as the average effect of the drug or the drug concentration needed to achieve a certain effect (e.g., IC50), for each unique set of conditions. For example, you might get separate averages or IC50 values for each species and each cell line.
+When you want to analyze the data, CDD Vault can calculate results for each unique set of conditions. For example, conditions allow the user to calculate the Average % Inhibition or EC50 for a specific cell line or drug concentration.
 
 Moreover, if you have multiple conditions, CDD Vault will analyze every possible combination. So, if you're looking at two species (e.g.,  mice and rats) and two cell lines (e.g.,  HK-2 and MKt-1), the Vault will give you results for each pairing: 
 + mice with HK-2, 

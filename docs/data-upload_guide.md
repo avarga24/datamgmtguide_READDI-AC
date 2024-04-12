@@ -3,9 +3,7 @@
     This portion of the webpage is still under construction!
 
 ## Importing files
-For successful data integration into CDD Vault, precise definition of protocol readouts is crucial to ensure accurate variable mapping. Uploads must conform to a **long-skinny format** (_see example image below_), with dedicated columns for RA-######## (_molecule ID_) and corresponding readout values. This structure is essential for correct data mapping and maintaining data integrity in CDD Vault. For further information, consult the [CDD Vault Knowledgebase resource site](https://support.collaborativedrug.com/hc/en-us/articles/214357923-3-Importing-Single-Point-Screening-Data#readout_definition).
-
-![Long-skinny format](assets/images/example_long-skinny_format.png)
+For successful data integration into CDD Vault, precise definition of protocol readouts is crucial to ensure accurate variable mapping. Uploads must conform to a **long-skinny format** - _see [example image below](#transforming-dataset-into-long-skinny-format-for-cdd-vault-upload)_, with dedicated columns for RA-#######-## (_READDI ID_) and corresponding readout values. This structure is essential for correct data mapping and maintaining data integrity in CDD Vault. For further information, consult the [CDD Vault Knowledgebase resource site](https://support.collaborativedrug.com/hc/en-us/articles/214357923-3-Importing-Single-Point-Screening-Data#readout_definition).
 
 !!! info "Jump to:"
     [**CDD Vault's tutorial**](https://support.collaborativedrug.com/hc/en-us/articles/214358183-How-do-I-format-a-file-for-import) on importing files. (Not READDI-AC-specific)
@@ -177,8 +175,28 @@ Calculations are defined as new readouts in existing protocols, based on previou
     + **If in doubt: REJECT Data Import**. You can always start the import again without much work, but it may take some work to delete all of the erroneously entered data after it's committed.
 + **Step 10**: When the import is finished, review the newly updated data by navigating to the **Run Page**--> **Data Summary** tab. 
 
-### Non-tabular data (not associated with tabular data)
-Insert instructions on uploading non-tabular data that is not associated with tabular data. 
+### Non-tabular data
+Insert instructions on uploading non-tabular data (e.g., image files, etc).
 
 ## Dataset transformation
-Guide on transforming dataset into skinny format goes here
+This section explains how to modify your dataset to meet the requirements for uploading to CDD Vault. It is essential that your Excel file includes a column labeled **RA #** which corresponds to the READDI Batch ID in CDD Vault. This setup is crucial for the proper mapping of variables and readouts in the system.
+
+### Transforming dataset into long skinny format for CDD Vault Upload
+To prepare your dataset for upload to CDD Vault, it's important to format it in the long-skinny format. Here’s how to effectively achieve this:
+
+**Understanding Long-Skinny Format**
+
+The long-skinny format organizes data with one column per variable and each row representing a single observation. This method is ideal for handling large datasets where each row can be a unique combination of variables.
+
+**Step-by-Step Instructions**
+
++ **Step 1** Adjust Sheet Placement: Ensure that the dataset's first sheet is the one you intend to upload. CDD Vault will only read the first sheet of your file.
+
++ **Step 2** Organize Columns According to Protocol Readouts: Include columns for all variables defined in your protocol's readout specifications. Arrange these columns to reflect the data accurately and consistently.
+
++ **Step 3** Include a Column for READDI ID: Ensure there is a designated column for the READDI ID. This identifier is crucial for tracking and associating data within the CDD Vault system.
+
+![Long-skinny format](assets/images/example_long-skinny_format.png)
+
+### Automating splitting comibined datasets (large excel files) into individual files
+Navigate to this [GitHub repository](https://github.com/lmaefos/data-transformation/blob/master/megafile_split.ipynb) for the python script on automating the process of dividing a large Excel dataset into multiple smaller Excel files.
