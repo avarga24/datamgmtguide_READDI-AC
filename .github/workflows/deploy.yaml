@@ -12,39 +12,31 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    steps:
+    steps:  # Ensure steps are indented correctly under the job
       - uses: actions/checkout@v3
       
-      - name: Setup Node
-        uses: actions/setup-node@v4.0.2
-      
-      - name: Cache pip
-        uses: actions/cache@v4.0.2
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          python-version: '3.8'  # Specify your Python version
 
-      - name: Upgrade pip and Install dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install --user mkdocs==1.5.3 mkdocs-material==9.5.18
-          
-      - name: Build the site
-        run: mkdocs build
+          pip install mkdocs mkdocs-material
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5.0.0
+      - name: Build the site and list directory
+        run: |
+          mkdocs build
+          ls -la  # Lists the contents of the current directory
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: './site'
+          path: ./site
 
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4.0.5
         with:
           artifact_name: github-pages
