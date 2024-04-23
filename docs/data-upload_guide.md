@@ -1,6 +1,4 @@
 # Data upload guide
-!!! warning "Please note:"
-    This portion of the webpage is still under construction!
 
 ## Importing files
 For successful data integration into CDD Vault, precise definition of protocol readouts is crucial to ensure accurate variable mapping. Uploads must conform to a **long-skinny format** - _see [example image below](#transforming-dataset-into-long-skinny-format-for-cdd-vault-upload)_, with dedicated columns for RA-#######-## (_READDI ID_) and corresponding readout values. This structure is essential for correct data mapping and maintaining data integrity in CDD Vault. For further information, consult the [CDD Vault Knowledgebase resource site](https://support.collaborativedrug.com/hc/en-us/articles/214357923-3-Importing-Single-Point-Screening-Data#readout_definition).
@@ -176,7 +174,10 @@ Calculations are defined as new readouts in existing protocols, based on previou
 + **Step 10**: When the import is finished, review the newly updated data by navigating to the **Run Page**--> **Data Summary** tab. 
 
 ### Non-tabular data
-Insert instructions on uploading non-tabular data (e.g., image files, etc).
+!!! warning "Please note:"
+    This portion of the webpage is still under construction!
+
+[CDD Vault database on attaching non-tabular data as .zip files.](https://support.collaborativedrug.com/hc/en-us/articles/7109670098324-Attaching-Files-in-CDD-Vault)
 
 ## Dataset transformation
 This section explains how to modify your dataset to meet the requirements for uploading to CDD Vault. It is essential that your Excel file includes a column labeled **RA #** which corresponds to the READDI Batch ID in CDD Vault. This setup is crucial for the proper mapping of variables and readouts in the system.

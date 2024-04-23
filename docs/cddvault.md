@@ -72,6 +72,8 @@ Defining readouts within CDD Vault protocols has **three key options:**
 
 [CDD Vault Readouts Knowledge Base link](https://support.collaborativedrug.com/hc/en-us/articles/214357903-Glossary-of-common-terms#readout_definition) (readouts)
 
+[Understanding long-skinny format](http://127.0.0.1:8000/datamgmtguide_READDI-AC/data-upload_guide/#transforming-dataset-into-long-skinny-format-for-cdd-vault-upload)
+
 ### Understanding Conditions
 CDD Vault allows researchers to manage varying experimental conditions within a single assay protocol, such as cell line, expression type, and species. Instead of creating multiple protocols for each variation, a single protocol can be used to handle different conditions simultaneously. This approach enables the averaging and calculation of results based on these conditions. When a protocol readout definition is designated as a condition, it categorizes related results for calculated readout definitions within that protocol, enhancing data organization and analysis efficiency.
 

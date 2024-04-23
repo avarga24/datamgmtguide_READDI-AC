@@ -16,9 +16,9 @@ markdown_extensions:
 nav:
   - Site Description: index.md
   - READDI-AC Data Stewardship: datastewardship.md
-  - Data Management Timeline: datamgmt_timeline.md
   - Understanding CDD Vault: cddvault.md
   - Data Upload Guide: data-upload_guide.md
+  - FAQ: FAQ.md
   - Contact Us: contact_us.md
 
 extra_css:
