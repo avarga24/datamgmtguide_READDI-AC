@@ -1,0 +1,1070 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmaefos.github.io/datamgmtguide_READDI-AC/data-upload_guide/">
+      
+      
+        <link rel="prev" href="../cddvault/">
+      
+      
+        <link rel="next" href="../FAQ/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+    
+    
+      
+        <title>Data Upload Guide - READDI-AC Data Management Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-upload-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="READDI-AC Data Management Guide" class="md-header__button md-logo" aria-label="READDI-AC Data Management Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            READDI-AC Data Management Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Upload Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmaefos/datamgmtguide_READDI-AC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="READDI-AC Data Management Guide" class="md-nav__button md-logo" aria-label="READDI-AC Data Management Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    READDI-AC Data Management Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmaefos/datamgmtguide_READDI-AC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datastewardship/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    READDI-AC Data Stewardship
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cddvault/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding CDD Vault
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data Upload Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Data Upload Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#importing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importing files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabular-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabular data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-other-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      All other data types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-a-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting-up a protocol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting-up a protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-guide-on-creating-a-new-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-step guide on creating a new protocol
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-guide-on-setting-up-a-readout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-step guide on setting-up a readout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-step guide on setting-up a readout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-or-editing-a-new-readout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating or editing a new readout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating or editing a new readout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readout-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Readout definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dose-response-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dose-response calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculated-readout-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculated readout definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-guide-on-importing-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-step guide on importing your data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-step guide on importing your data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabular-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabular data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-tabular-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-tabular data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset transformation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset transformation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transforming-dataset-into-long-skinny-format-for-cdd-vault-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transforming dataset into long skinny format for CDD Vault Upload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automating-splitting-comibined-datasets-large-excel-files-into-individual-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automating splitting comibined datasets (large excel files) into individual files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact_us/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#importing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importing files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabular-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabular data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-other-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      All other data types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-a-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting-up a protocol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting-up a protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-guide-on-creating-a-new-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-step guide on creating a new protocol
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-guide-on-setting-up-a-readout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-step guide on setting-up a readout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-step guide on setting-up a readout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-or-editing-a-new-readout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating or editing a new readout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating or editing a new readout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readout-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Readout definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dose-response-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dose-response calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculated-readout-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculated readout definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-guide-on-importing-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-step guide on importing your data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-step guide on importing your data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabular-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabular data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-tabular-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-tabular data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset transformation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset transformation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transforming-dataset-into-long-skinny-format-for-cdd-vault-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transforming dataset into long skinny format for CDD Vault Upload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automating-splitting-comibined-datasets-large-excel-files-into-individual-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automating splitting comibined datasets (large excel files) into individual files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="data-upload-guide">Data upload guide</h1>
+<h2 id="importing-files">Importing files</h2>
+<p>For successful data integration into CDD Vault, precise definition of protocol readouts is crucial to ensure accurate variable mapping. Uploads must conform to a <strong>long-skinny format</strong> - <em>see <a href="#transforming-dataset-into-long-skinny-format-for-cdd-vault-upload">example image below</a></em>, with dedicated columns for RA-#######-## (<em>READDI ID</em>) and corresponding readout values. This structure is essential for correct data mapping and maintaining data integrity in CDD Vault. For further information, consult the <a href="https://support.collaborativedrug.com/hc/en-us/articles/214357923-3-Importing-Single-Point-Screening-Data#readout_definition">CDD Vault Knowledgebase resource site</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Jump to:</p>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/214358183-How-do-I-format-a-file-for-import"><strong>CDD Vault's tutorial</strong></a> on importing files. (Not READDI-AC-specific)</p>
+<p><a href="#step-by-step-guide-on-importing-your-data"><strong>READDI-AC-specific step-by-step guide on importing your data</strong></a> on importing files.</p>
+</div>
+<p><center> <em>Continue reading along for more details regarding READDI-AC specific data types structure.</em> </center></p>
+<h3 id="tabular-data">Tabular data</h3>
+<p>Your tabular data can either be added as a:</p>
+<ul>
+<li><strong>Readout definition</strong> <em>(if your raw dataset does <u>not</U> need further calculations, i.e. EC50 calculation was already conducted, this is the most common readout you will encounter)</em></li>
+<li><strong>Dose-response calculation</strong></li>
+<li><strong>Calculated readout definition</strong> </li>
+</ul>
+<p><img alt="CDD Vault Adding Readouts Selection" src="../assets/images/addreadouts.png" /></p>
+<p>If you have <strong>corresponding non-tabular data files associated with the tabular data</strong>, please follow the guidelines described in the <a href="(#step-by-step-guide-on-importing-your-data)">step-by-step guide on importing your data.</a></p>
+<h3 id="all-other-data-types">All other data types</h3>
+<p><em>Ask Ava to clarify how to store other files that are <strong>not</strong> related to the tabular data imported</em></p>
+<ul>
+<li>Add as "File" type in <strong>Readout Definition</strong>??</li>
+</ul>
+<h2 id="setting-up-a-protocol">Setting-up a protocol</h2>
+<div class="admonition info">
+<p class="admonition-title">Jump to:</p>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/214357923-3-Importing-Single-Point-Screening-Data#protocol_setup"><strong>CDD Vault's tutorial</strong></a> on protocol set-up. (Not READDI-AC-specific)</p>
+<p>For an in-depth explanation of <strong>Protocols</strong>, see <a href="../cddvault/#understanding-protocols">Understanding Protocols</a> section. </p>
+</div>
+<h3 id="step-by-step-guide-on-creating-a-new-protocol">Step-by-step guide on creating a new protocol</h3>
+<ul>
+<li><strong>Step 1:</strong> Log in to CDD Vault and ensure you have access to the <strong>READDI AViDD</strong> Project (or an ad hoc project specific to your study)</li>
+<li>
+<p><strong>Step 2:</strong> Navigate to the <strong>Explore Data</strong> tab and locate <strong>Create a new protocol</strong> </p>
+<p><img alt="CDD Vault Add New Protocol" src="../assets/images/addprotocol.jpg" /></p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Double check you're in the correct <strong>Project</strong> and select a protocol template based on your assay by clicking the <strong>Form drop down</strong>. 
+<em><center> Remember there are 4 protocol templates for READDI-AC. See <a href="../cddvault/#READDI-AC-Protocol-Categories">READDI-AC Protocol Categories</a> for more info regarding selecting the appropriate protocol category for your assay type. </center></em>
+    <img alt="CDD Vault Select Protocol Category" src="../assets/images/protocolcats.png" /></p>
+</li>
+<li>
+<p><strong>Step 4:</strong> Follow this <strong>Protocol Name</strong> nomenclature structure: <strong>INVESTIGATOR LAST NAME</strong> - <strong>VIRUS TARGET</strong> - <strong>ASSAY TITLE</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Protocol Name Example</p>
+<p>Arrowsmith - SARS2 nsp 13 ATPase - Dose-Reponse</p>
+</div>
+</li>
+<li>
+<p><strong>Step 5:</strong> Fill out the rest of the form, ensuring the required(*) fields are complete, but the more info the better!</p>
+</li>
+<li>
+<p><strong>Step 6:</strong> Attach SOP using the <strong>Upload a file</strong> button. </p>
+<p><img alt="CDD Vault Attach SOP" src="../assets/images/SOPattachment.png" /></p>
+</li>
+<li>
+<p><strong>Step 7:</strong> Click <strong>Create Protocol</strong></p>
+<p><img alt="CDD Vault Attach SOP" src="../assets/images/createprotocol.png" /></p>
+</li>
+</ul>
+<h2 id="step-by-step-guide-on-setting-up-a-readout">Step-by-step guide on setting-up a readout</h2>
+<div class="admonition info">
+<p class="admonition-title">Jump to:</p>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/214357923-3-Importing-Single-Point-Screening-Data#readout_definition"><strong>CDD Vault's tutorial</strong></a> on setting up a readout. (Not READDI-AC-specific)</p>
+<p>For an in-depth explanation of <strong>Readouts</strong>, see <a href="../cddvault/#understanding-readouts">Understanding Readouts</a> section.</p>
+</div>
+<h3 id="creating-or-editing-a-new-readout">Creating or editing a new readout</h3>
+<ul>
+<li>
+<p>If you just recently created the protocol, you'll now have the option to assign readouts to your protocol. </p>
+</li>
+<li>
+<p>If you are adding a new readout to an <em><strong>existing</strong> protocol</em> you can follow along with these steps as well by first navigating to the protocol and editing the readouts under the <strong>Protocol Details</strong> tab. 
+    <img alt="CDD Vault Attach SOP" src="../assets/images/add_edit_readouts.jpg" /></p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Remember, there are 3 options for assigning readouts, this guide below will go through all three options.</p>
+<p><a href="#readout-definition">Readout definition</a></p>
+<p><a href="#dose-response-calculation">Dose-response calculation</a></p>
+<p><a href="#calculated-readout-definition">Calculated readout definition</a></p>
+</div>
+<h4 id="readout-definition">Readout definition</h4>
+<p>Selecting <strong>Add a readout definition</strong> will allow the user to associate the dataset to a defined readout. Note that most data types will fall under this category, e.g., <strong>single-concentration results</strong> (<em>i.e., % inhibition, titer reduction, % viability</em>) and <strong>protocol conditions</strong> (<em>i.e.,concentration, virus, cell line</em>). </p>
+<ul>
+<li><strong>Step 1</strong>: Add the variable <strong>Name</strong>. </li>
+<li>
+<p><strong>Step 2</strong>: Select <strong>data type</strong>. For this readout type, there are <strong>5 different data types</strong> that you can select from. <em>See <a href="../cddvault/#understanding-readouts">Understanding Readouts</a> section for more info on data types.</em> </p>
+<p><img alt="CDD Vault readout types" src="../assets/images/datatype_readouts.png" /></p>
+<ul>
+<li>
+<p><strong>Number</strong> data types:</p>
+<ul>
+<li><strong>Step 2.N.1</strong> Add Unit</li>
+<li><strong>Step 2.N.2</strong> Add Display Format: the standard is 3 significant figures</li>
+<li><strong>Step 2.N.3</strong> Add description: Note any transformations that your dataset has undergone and other useful information regarding your dataset here. </li>
+<li><strong>Step 2.N.4</strong> Select <strong>Do not normalize this readout</strong></li>
+<li><strong>Step 2.N.5</strong> Don't forget to click <strong>update readout</strong> once complete</li>
+</ul>
+<p><strong>IC50 Readout Example</strong>
+<img alt="CDD Vault Number Readout" src="../assets/images/number_readout.png" /></p>
+</li>
+<li>
+<p><strong>Text</strong> data types:</p>
+<ul>
+<li>guide goes here</li>
+</ul>
+</li>
+<li>
+<p><strong>Pick list</strong> data types:</p>
+<ul>
+<li><strong>Step 2.PL.1</strong> click on <strong>Edit Pick List</strong></li>
+<li><strong>Step 2.PL.2</strong> a new light-box window will pop up, where you can manually type values one at a time, or  or copy/paste an entire list of values.</li>
+<li><strong>Step 2.PL.3</strong> click <strong>enter</strong> after every manually entered value. Or simply copy/paste a list where entries are placed on different rows.</li>
+<li><strong>Step 2.PL.4</strong> click on <strong>update picklist</strong> once complete. </li>
+</ul>
+<p><strong>Virus pick list readout example</strong>
+<img alt="CDD Vault Pick List Readout" src="../assets/images/picklist_readout.png" /></p>
+</li>
+<li>
+<p><strong>File</strong> data types:</p>
+<ul>
+<li>guide goes here</li>
+</ul>
+</li>
+<li>
+<p><strong>Batch Link</strong> data types:</p>
+<ul>
+<li>guide goes here</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="dose-response-calculation">Dose-response calculation</h4>
+<p>Adding a <strong>dose-response calculation</strong> will present the user with the form shown below to build a calculation using the Levenberg-Marquardt algorithm used to fit a Hill equation to dose-response data. Note that if you already performed calculations <strong>outside</strong> of CDD Vault, then you will <u><strong>not</strong></u> use this readout, but instead use the <strong><a href="#readout-definition">add readout definition</a></strong> option.</p>
+<ul>
+<li><strong>Step 1</strong>: Fill in the form working from top to bottom. Start by defining the raw data to be imported, followed by data normalization, fit parameters and validation, and finally the calculated end-point. </li>
+<li><strong>Step 2</strong>: Ensure that the <strong>display format</strong> of the data calculations is in <strong>3 significant figures</strong></li>
+<li><strong>Step 3</strong>: Don't forget to click <strong>add/update calculation</strong> at the bottom of the form. </li>
+</ul>
+<p><strong>Dose-response calculation example</strong>
+<img alt="CDD Vault Dose-Response Example" src="../assets/images/dose-response_example.png" /></p>
+<h4 id="calculated-readout-definition">Calculated readout definition</h4>
+<p>Calculations are based on existing assay data within your CDD Vault protocols, as well as chemical properties of the registered compounds, and numeric constants. In this manner, you can build dynamic mathematical functions that use protocol readouts as variables, and are automatically updated when new raw data is imported into the Vault.</p>
+<p>Calculations are defined as new readouts in existing protocols, based on previously defined readouts. In a new protocol, calculations will be added after the initial set of raw data readout definitions.</p>
+<ul>
+<li><strong>Step 1</strong>: Chose to add a calculated readout definition. <em>Note that if you don't see the formula box as shown below, you do not have access to advanced calculations. <a href="../contact_us/">Contact your CDD representative</a> or support to enable this.</em>
+    <img alt="CDD Vault Add Calculation Example" src="../assets/images/add_calculation.png" /></li>
+<li><strong>Step 2</strong>: Provide a name for the calculated readout definition (one that does not conflict with any other readout names in this protocol).</li>
+<li><strong>Step 3</strong>: Fill in the formula in the provided formula builder.</li>
+<li><strong>Step 4</strong>: Always select <strong>average by batch and run</strong> aggregation.</li>
+<li><strong>Step 5</strong>: Add description as deemed necessary.</li>
+<li><strong>Step 6</strong>: Don't forget to click <strong>update or save calculated readout definition</strong> at the bottom of the form.</li>
+</ul>
+<p><strong>Calculated readout example</strong>
+<img alt="CDD Vault Calculation Example" src="../assets/images/add_calculation_example.png" /></p>
+<h2 id="step-by-step-guide-on-importing-your-data">Step-by-step guide on importing your data</h2>
+<p><strong>Before iniating the upload process, ensure that the following conditions have been met:</strong></p>
+<ul>
+<li>✓ A protocol exists in the system with the appropriate readouts assigned<ul>
+<li>For instructions on creating a new protocol, click <a href="#setting-up-a-protocol">here</a> </li>
+</ul>
+</li>
+<li>✓ Your data set is in a long-skinny format. <ul>
+<li>For assistance with transforming your dataset into a long-sknny format, click <a href="#dataset-transformation">here</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="../contact_us/">Contact a READDI Steward</a> if you're having issues with any of these pre-requesites. </p>
+<h3 id="tabular-data_1">Tabular data</h3>
+<ul>
+<li><strong>Step 1</strong>: Choose data file (and project). Note that at the very minimum, your file should contain structures and required batch fields. </li>
+<li><strong>Step 2</strong>: On the Import Data tab, upload your import file and choose your project. Make sure to select the right project, or the protocol name will not be available for mapping in the next step.
+    <img alt="CDD Vault readout types" src="../assets/images/import_data_tab.png" /></li>
+<li><strong>Step 3</strong>: Map fields. Make sure that the "Add readouts (protocol data) only" option is selected.<ul>
+<li><em><strong>If applicable</strong> step</em>: Map the plate and well columns. When a column in the file preview pane is highlighted, CDD Vault will make an attempt to guess your mapping based on the provided file header. If the guess is correct, all you have to do, is click "apply". If the guess is not correct, change the mapping in the section below the file preview pane.<br />
+<img alt="CDD Vault readout types" src="../assets/images/best%20guess.png" /></li>
+</ul>
+</li>
+<li><strong>Step 4</strong>: Map assay data. All assay data is mapped under the <strong>Readouts (Protocol Data) section</strong>. When this is selected there is a series of drop-downs that appear each time you make a selection. Note that if CDD Vault could not provide a best guess for the mapping, "<strong>Do not import</strong>" is automatically selected. Change "<strong>Do not import</strong>" to "<strong>Protocols (Readout Data)</strong>" option. Select the appropriate readout definition from the drop-down.
+    <img alt="CDD Vault readout types" src="../assets/images/protocol%20mapping1.png" /></li>
+<li><strong>Step 5</strong>: Click on <strong>Create a new run</strong> and fill the form. The data from the import file is going to be added to a new <a href="../cddvault/#understanding-runs"><strong>run</strong></a> of a protocol. Ensure to describe any relevant info about the data in the "Conditions" section. <ul>
+<li><em><strong>If applicable</strong> step</em>: Upload related files in this step (e.g. graphs, images, etc.). You'll see an option to attach additional files.  </li>
+</ul>
+</li>
+<li><strong>Step 6</strong>: Click on <strong>Create this run</strong>, and then finalize the mapping by clicking <strong>Apply</strong> <ul>
+<li><em><strong>If applicable</strong> step</em>: Repeat the steps 3 to 6 to map other variables in the same input dataset. </li>
+</ul>
+</li>
+<li>
+<p><strong>Step 7</strong>: Click on <strong>Process File</strong>. You'll see a yellow progress bar at the top which will provide an indication how the the initial import is progressing. Once the initial stage is completed, you will see a QC or import validation report.</p>
+<p><img alt="CDD Vault readout types" src="../assets/images/process_file.png" /></p>
+</li>
+<li>
+<p><strong>Step 8</strong>: Review the QC import validation report, this report will give clues if something is invalid. At this stage the data have not been written into your vault, and you may simply "reject" or cancel the entire import, or any of the events you see. Once the file is "committed", it means the import is finalized and it is more difficult to undo (though not impossible). </p>
+</li>
+<li><strong>Step 9</strong>: If the report looks promising, click on <strong>Commit Data Import</strong>. When the commit step is finished, the import report will update one more time, providing quick links to review, QC or visualize the data.<ul>
+<li><strong>If in doubt: REJECT Data Import</strong>. You can always start the import again without much work, but it may take some work to delete all of the erroneously entered data after it's committed.</li>
+</ul>
+</li>
+<li><strong>Step 10</strong>: When the import is finished, review the newly updated data by navigating to the <strong>Run Page</strong>--&gt; <strong>Data Summary</strong> tab. </li>
+</ul>
+<h3 id="non-tabular-data">Non-tabular data</h3>
+<div class="admonition warning">
+<p class="admonition-title">Please note:</p>
+<p>This portion of the webpage is still under construction!</p>
+</div>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/7109670098324-Attaching-Files-in-CDD-Vault">CDD Vault database on attaching non-tabular data as .zip files.</a></p>
+<h2 id="dataset-transformation">Dataset transformation</h2>
+<p>This section explains how to modify your dataset to meet the requirements for uploading to CDD Vault. It is essential that your Excel file includes a column labeled <strong>RA #</strong> which corresponds to the READDI Batch ID in CDD Vault. This setup is crucial for the proper mapping of variables and readouts in the system.</p>
+<h3 id="transforming-dataset-into-long-skinny-format-for-cdd-vault-upload">Transforming dataset into long skinny format for CDD Vault Upload</h3>
+<p>To prepare your dataset for upload to CDD Vault, it's important to format it in the long-skinny format. Here’s how to effectively achieve this:</p>
+<p><strong>Understanding Long-Skinny Format</strong></p>
+<p>The long-skinny format organizes data with one column per variable and each row representing a single observation. This method is ideal for handling large datasets where each row can be a unique combination of variables.</p>
+<p><strong>Step-by-Step Instructions</strong></p>
+<ul>
+<li>
+<p><strong>Step 1</strong> Adjust Sheet Placement: Ensure that the dataset's first sheet is the one you intend to upload. CDD Vault will only read the first sheet of your file.</p>
+</li>
+<li>
+<p><strong>Step 2</strong> Organize Columns According to Protocol Readouts: Include columns for all variables defined in your protocol's readout specifications. Arrange these columns to reflect the data accurately and consistently.</p>
+</li>
+<li>
+<p><strong>Step 3</strong> Include a Column for READDI ID: Ensure there is a designated column for the READDI ID. This identifier is crucial for tracking and associating data within the CDD Vault system.</p>
+</li>
+</ul>
+<p><img alt="Long-skinny format" src="../assets/images/example_long-skinny_format.png" /></p>
+<h3 id="automating-splitting-comibined-datasets-large-excel-files-into-individual-files">Automating splitting comibined datasets (large excel files) into individual files</h3>
+<p>Navigate to this <a href="https://github.com/lmaefos/data-transformation/blob/master/megafile_split.ipynb">GitHub repository</a> for the python script on automating the process of dividing a large Excel dataset into multiple smaller Excel files.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>

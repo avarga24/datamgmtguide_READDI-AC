@@ -1,0 +1,757 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmaefos.github.io/datamgmtguide_READDI-AC/cddvault/">
+      
+      
+        <link rel="prev" href="../datastewardship/">
+      
+      
+        <link rel="next" href="../data-upload_guide/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+    
+    
+      
+        <title>Understanding CDD Vault - READDI-AC Data Management Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cdd-vault-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="READDI-AC Data Management Guide" class="md-header__button md-logo" aria-label="READDI-AC Data Management Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            READDI-AC Data Management Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Understanding CDD Vault
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmaefos/datamgmtguide_READDI-AC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="READDI-AC Data Management Guide" class="md-nav__button md-logo" aria-label="READDI-AC Data Management Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    READDI-AC Data Management Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmaefos/datamgmtguide_READDI-AC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datastewardship/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    READDI-AC Data Stewardship
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Understanding CDD Vault
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Understanding CDD Vault
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Projects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Protocols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readdi-ac-protocol-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      READDI-AC Protocol Categories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-molecules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Molecules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Molecules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#molecule-registration-and-id-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molecule Registration and ID Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-readouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Readouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Readouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Conditions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Runs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-upload_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Upload Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact_us/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Projects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Protocols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readdi-ac-protocol-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      READDI-AC Protocol Categories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-molecules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Molecules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Molecules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#molecule-registration-and-id-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molecule Registration and ID Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-readouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Readouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Readouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Conditions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Runs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="cdd-vault-guide">CDD Vault Guide</h1>
+<p>Data uploads in READDI-AC leverage CDD Vault in order to streamline data management and collaboration. The platform supports efficient data handling, integration, and analysis, enhancing virological research.
+This section will provide guidance on understanding CDD Vault's structure.</p>
+<p><a href="https://drive.google.com/file/d/1bdmoXYiBd2b4GIhLZ9lG4Bn7eD8qrTtM/view?usp=drive_link"><img alt="CDD Vault Structure" src="../assets/images/cddvaultdiagram.png" /></a></p>
+<p>When it's ready -----&gt;  <strong>View a recording of the CDD Vault UNC READDI: Kick-Off</strong></p>
+<h2 id="understanding-projects">Understanding Projects</h2>
+<p>In the context of READDI-AC, a CDD <span class="button-text-blue"><strong>Project</strong></span> serves as a shared space where team members can access and collaborate on data sets that are interconnected. Think of it as a designated area within a digital library, where all the research data relevant to a specific subject or collaborative effort is stored and managed. This organization aids in streamlining collaboration and ensuring that pertinent data is easily accessible and shareable among those who need it.</p>
+<p>For READDI-AC, there is one primary <span class="button-text-blue"><strong>Project</strong></span> where most of the collaborative work and data sharing will take place. This central Project is where team members across different research areas and functions can store, access, and share their data, fostering an integrated and cooperative research environment.</p>
+<p>However, we understand that some labs may handle sensitive or proprietary data that requires additional confidentiality due to legal or intellectual property considerations. In such instances, READDI-AC is prepared to establish dedicated <span class="button-text-blue"><strong>Project</strong></span> for these labs. These specialized <span class="button-text-blue"><strong>Project</strong></span> will have enhanced restrictions to safeguard the sensitive data, ensuring that it is only accessible to authorized personnel and that it complies with any legal restrictions. This approach allows labs to participate fully in the collaborative environment of READDI-AC while maintaining the necessary level of data protection and compliance.</p>
+<p>When you first log into CDD Vault, your access and navigational options will depend on your role. Vault administrators can view and manage all project memberships and are responsible for granting access to the necessary <span class="button-text-blue"><strong>Project</strong></span>. If you need access to any specific <span class="button-text-blue"><strong>Project</strong></span> or if you are handling sensitive data and require a separate <span class="button-text-blue"><strong>Project</strong></span> setup, please reach out to Ava by <a href="../contact_us/">filling out this form</a> where you can indicate any special data handling needs.</p>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/214357843-1-Logging-in-and-navigation#first_project">CDD Vault Project Knowledge Base link</a> (what is a Project)</p>
+<h2 id="understanding-protocols">Understanding Protocols</h2>
+<p>Protocols in CDD Vault are essentially templates for experiments. They define how to structure and record the data you gather from your assays. When setting up a Protocol, you'll detail the conditions, what you're measuring, and how you want to process the data. This could include calculations for averages, IC50 curves, and any specific grouping of results. Protocols ensure consistency across experiments and help maintain the integrity and context of your research findings.</p>
+<p>For the READDI-AC project, all imported data will be stored within the designated READDI-AC Project space in CDD Vault. Within this space, data is organized by specific Protocols that reflect the lab and assay name. This organizational structure ensures that data is not only accurately categorized but also easy to retrieve and analyze.</p>
+<h3 id="readdi-ac-protocol-categories">READDI-AC Protocol Categories</h3>
+<p>Data imported into the CDD Vault is meticulously structured within the READDI-AC Project framework, with data organized under Protocols tailored to specific lab and assay names. To cater to diverse study requirements, Protocols are classified into four distinct types. A template for each protocol category is provided under the description. </p>
+<ul>
+<li>
+<p><strong>Cell-based assays:</strong> uses live cells to examine biological responses to various substances, such as drugs, chemicals, or biological compounds. These assays are crucial for understanding the effects of these substances on cell health, function, proliferation, and death. They can be used to assess efficacy, toxicity, and mechanism of action of therapeutic candidates.
+<a href="../assets/files/CDD%20Vault_protocol_cell-basedassay_fields.pdf">View template</a></p>
+</li>
+<li>
+<p><strong>Target-based assays:</strong> are designed to study the interaction between a potential drug candidate and a specific biological target, which is typically a protein (e.g., enzyme, receptor) implicated in a disease. The goal is to assess the ability of the substance to modulate the activity of the target, either by inhibiting or activating it. These assays are fundamental in early drug discovery phases to identify and optimize compounds with desired biological activity.
+<a href="../assets/files/CDD%20Vault_protocol_target-basedassay_fields.pdf">View template</a></p>
+</li>
+<li>
+<p><strong>Animal studies:</strong> aka in vivo studies involve using non-human animals to evaluate the biological and pharmacological effects of substances in a complex living organism. These studies provide valuable information on the efficacy, toxicity, pharmacokinetics, and pharmacodynamics of therapeutic candidates. Animal models are selected based on their relevance to human physiology and the disease being studied.
+<a href="../assets/files/CDD%20Vault_protocol_animalstudy_fields.pdf">View template</a></p>
+</li>
+<li>
+<p><strong>Physiochemical properties assays:</strong> encompasses the study of the physical and chemical properties of substances, including solubility, stability, molecular weight, and form (solid, liquid, gas). Understanding these properties is crucial for drug formulation, delivery, and development, as they influence a drug's absorption, distribution, metabolism, and excretion (ADME) profiles. Physicochemical properties assays help optimize drug candidates for better efficacy, safety, and patient compliance.
+<a href="../assets/files/CDD%20Vault_protocol_physicochemical_fields.pdf">View template</a></p>
+</li>
+</ul>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/214357903-Glossary-of-common-terms#protocol">CDD Vault Protocols Knowledge Base link</a> (Protocol)</p>
+<h2 id="understanding-molecules">Understanding Molecules</h2>
+<p>While protocols organize the workflow and data processing steps, molecules represent the chemical entities being studied within these protocols. The relationship between protocols and molecules is symbiotic; protocols provide the methodological framework, while molecule data delivers the substance for analysis, ensuring reliability and consistency in your experimental results.</p>
+<h3 id="molecule-registration-and-id-management">Molecule Registration and ID Management</h3>
+<p>As a data uploader or investigator within the READDI-AC project, understanding the role and management of molecule data is crucial.</p>
+<ul>
+<li>
+<p><strong>Molecule Registration:</strong> Data uploaders are not required to register molecules directly. The molecular structures typically associated with the READDI-AC project, including those used in various assays across different labs, have already been imported and registered within the system. This foundational step ensures that all subsequent data associated with these molecules are accurately captured and cataloged.</p>
+</li>
+<li>
+<p><strong>Molecule IDS and SMILES Strings:</strong> Molecules have a unique READDI Batch ID following the format of RA-XXXXXXX-XX, which can be registered with a structure (SMILES string) or structure-blinded. When preparing datasets for upload, <strong>ensure that there is a dedicated column for READDI IDs</strong>, linking each data point distinctly to its corresponding “RA” number.</p>
+</li>
+<li>
+<p><strong>Handling Unrecognized Molecule IDs:</strong> If CDD Vault flags an unrecognized READDI ID during data upload or analysis, it is vital to address this promptly. Please reach out to our Stewardship team and include Anwar Hossain (anwar.hossain@unc.edu) to investigate. Our team is equipped to assist in troubleshooting and resolving any issues with molecule IDs, ensuring seamless integration and analysis of your data within the platform.</p>
+</li>
+</ul>
+<h2 id="understanding-readouts">Understanding Readouts</h2>
+<p><a href="https://drive.google.com/file/d/1bdWfgTbW1sFz8MAd3yQrPOfQ7PtFgw6W/view?usp=drive_link"><img alt="Readouts" src="../assets/images/CDDVault_readouts.jpg" /></a></p>
+<p>In the context of the READDI-AC project, protocols within the CDD Vault serve as foundational structures to systematize and manage your experimental data, including readout definitions which represent various result types. These result types can range from raw experimental data to calculated metrics like % Inhibition or Z-score, ensuring consistent data organization. </p>
+<p>Defining readouts within CDD Vault protocols has <strong>three key options:</strong></p>
+<ul>
+<li>
+<p><strong>Readout Definition:</strong> This is the primary method we'll use, capturing specific data points or measurements from an assay. This readout type allows users to specify the data type they are uploading:</p>
+<ul>
+<li><strong>Number</strong>: the most common data type for HTS data. Only numeric values with modifiers (&gt;, &lt;, &gt;=, &lt;=) are permitted. This means that things like N/A or "precipitated" are not allowed. </li>
+<li><strong>Text</strong>: alphanumeric values are permitted. Qualitative results and hyperlinks should also be entered as this data type.</li>
+<li><strong>Pick List</strong>: a predefined list of alphanumeric values that may be entered for this readout. Gives the protocol owner the ability to control the values that are imported into the vault. Data such as phenotypes, descriptions, cell lines etc. should be defined as pick lists. Note, that you cannot calculate across pick-list values! Learn more about pick lists.</li>
+<li><strong>Batch Link</strong>: allows linking Batch records to other entities stored in the same or across separate CDD Vaults (if the Link Across Vaults feature is enabled for your CDD Account).</li>
+<li><strong>File</strong>: file attachments of any file type and size.  Image previews will be generated for JPG, GIF, BMP, PNG, TIFF and PDF formats. All other files will be available for download to view with their native software.</li>
+</ul>
+</li>
+<li>
+<p><strong>Calculated Readout Definition:</strong> Useful when you need to derive averages or other statistical measures from existing Readouts in the protocol, like ‘Average % Inhibition’ either within or across runs.</p>
+</li>
+<li>
+<p><strong>Dose-Response Calculation:</strong> Employed for analyzing data that is uploaded as individual x- and y-axis datapoints with a range of concentrations or doses to determine values like IC50, IC90 or CC50, typically using the Hill equation.</p>
+</li>
+</ul>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/214357903-Glossary-of-common-terms#readout_definition">CDD Vault Readouts Knowledge Base link</a> (readouts)</p>
+<p><a href="http://127.0.0.1:8000/datamgmtguide_READDI-AC/data-upload_guide/#transforming-dataset-into-long-skinny-format-for-cdd-vault-upload">Understanding long-skinny format</a></p>
+<h3 id="understanding-conditions">Understanding Conditions</h3>
+<p>CDD Vault allows researchers to manage varying experimental conditions within a single assay protocol, such as cell line, expression type, and species. Instead of creating multiple protocols for each variation, a single protocol can be used to handle different conditions simultaneously. This approach enables the averaging and calculation of results based on these conditions. When a protocol readout definition is designated as a condition, it categorizes related results for calculated readout definitions within that protocol, enhancing data organization and analysis efficiency.</p>
+<p>When you want to analyze the data, CDD Vault can calculate results for each unique set of conditions. For example, conditions allow the user to calculate the Average % Inhibition or EC50 for a specific cell line or drug concentration.</p>
+<p>Moreover, if you have multiple conditions, CDD Vault will analyze every possible combination. So, if you're looking at two species (e.g.,  mice and rats) and two cell lines (e.g.,  HK-2 and MKt-1), the Vault will give you results for each pairing: 
++ mice with HK-2, </p>
+<ul>
+<li>
+<p>mice with MKt-1, </p>
+</li>
+<li>
+<p>rats with HK-2, </p>
+</li>
+<li>
+<p>and so on. </p>
+</li>
+</ul>
+<p>This level of detail helps you pinpoint exactly how different variables affect your outcomes.</p>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/214357903-Glossary-of-common-terms#readout_definition:~:text=of%20data%20analysis.-,Condition,-Condition%20is%20a">CDD Vault Conditions Knowledge Base link</a> (condition)</p>
+<h2 id="understanding-runs">Understanding Runs</h2>
+<p>A run signifies a distinct instance of an experiment guided by a specific protocol, encapsulating the unique data derived from each assay execution in the lab. Whenever you conduct an experiment following a protocol and upload its results to CDD Vault, you create a run tied to that protocol. Multiple experiments carried out on the same day under identical conditions can each be logged as separate runs within the same protocol, a system feature that ensures meticulous data organization and facilitates precise tracking of experimental details and outcomes.</p>
+<p>Runs are organized by date, and you may back-date it, if you are importing data several days after performing the actual experiment. The best practice is that the run date you add to your CDD Vault matches the experiment date in your lab notebook.</p>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/214359683-Importing-data-for-several-runs-on-the-same-day"><img alt="runs" src="../assets/images/multipleruns.png" /></a></p>
+<p><a href="https://support.collaborativedrug.com/hc/en-us/articles/214359683-Importing-data-for-several-runs-on-the-same-day">CDD Vault Runs Knowledge Base link</a> (run)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>
