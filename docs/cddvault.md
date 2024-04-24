@@ -5,7 +5,8 @@ This section will provide guidance on understanding CDD Vault's structure.
 
 [![CDD Vault Structure](assets/images/cddvaultdiagram.png)](https://drive.google.com/file/d/1bdmoXYiBd2b4GIhLZ9lG4Bn7eD8qrTtM/view?usp=drive_link)
 
-When it's ready ----->  **View a recording of the CDD Vault UNC READDI: Kick-Off**
+## CDD Vault Tutorial with READDI Team
+Click [here](https://hello.chorus.ai/listen?guid=9b1b22579292415cbe7874c7c159fa47) to request access to the recording of the CDD Vault UNC READDI: Kick-Off virtual meeting. This link will direct you to a request form where you'll need to enter your email address. Access to the video recording of the first tutorial hosted for READDI-AC investigators is not immediate and requires a short verification process. Once your request is approved, a link to view the recording will be sent to the provided email address. If you experience any delays or difficulties in gaining access, please don’t hesitate to [contact us](contact_us.md) for assistance.
 
 ## Understanding Projects
 In the context of READDI-AC, a CDD <span class="button-text-blue">**Project**</span> serves as a shared space where team members can access and collaborate on data sets that are interconnected. Think of it as a designated area within a digital library, where all the research data relevant to a specific subject or collaborative effort is stored and managed. This organization aids in streamlining collaboration and ensuring that pertinent data is easily accessible and shareable among those who need it.
