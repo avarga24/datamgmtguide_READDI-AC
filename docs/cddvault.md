@@ -3,7 +3,17 @@
 Data uploads in READDI-AC leverage CDD Vault in order to streamline data management and collaboration. The platform supports efficient data handling, integration, and analysis, enhancing virological research.
 This section will provide guidance on understanding CDD Vault's structure.
 
-[![CDD Vault Structure](assets/images/cddvaultdiagram.png)](https://drive.google.com/file/d/1bdmoXYiBd2b4GIhLZ9lG4Bn7eD8qrTtM/view?usp=drive_link)
+[![CDD Vault Structure](assets/images/cddvaultdiagram.png)](https://drive.google.com/file/d/1_kXmi_-l-RQ04Mxo8K04OspC-YPlRYx1/view?usp=drive_link)
+
+This diagram describes the organizational structure in CDD Vault. Below are brief descriptions of each aspect. For further details, click each link to direct you to more information. 
+
+- [**Projects**](cddvault.md/#understanding-projects): There will be one main READDI-AC **Project** where all registered Molecules and Protocols will fall under. An ad hoc project will be created for IP/Sensitive data. Protocols are registered and users upload data generated with that protocol (Readouts) on specific molecules.  
+
+- [**Molecule**](cddvault.md/#understanding-molecules): Molecule registration is derived from Signals. Each unique molecule structure is given a unique READDI-AC ID. Data is collected on Molecules using a specific Protocol. 
+
+- [**Protocol**](cddvault.md/#understanding-protocols): A Protocol is a specific experimental approach or test performed on a given compound. Datasets will be associated with a protocol.
+
+- [**Readout**](cddvault.md/#understanding-readouts): Creating a new protocol will allow users to define a Readout by setting parameters that represent all of the result types that are captured for any specific assay. This is also where users can indicate non-tabular data types such as text files or image files. 
 
 ## CDD Vault Tutorial with READDI Team
 Click [here](https://hello.chorus.ai/listen?guid=9b1b22579292415cbe7874c7c159fa47) to request access to the recording of the CDD Vault UNC READDI: Kick-Off virtual meeting. This link will direct you to a request form where you'll need to enter your email address. Access to the video recording of the first tutorial hosted for READDI-AC investigators is not immediate and requires a short verification process. Once your request is approved, a link to view the recording will be sent to the provided email address. If you experience any delays or difficulties in gaining access, please don’t hesitate to [contact us](contact_us.md) for assistance.
