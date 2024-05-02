@@ -140,6 +140,15 @@ Calculations are defined as new readouts in existing protocols, based on previou
 **Calculated readout example**
 ![CDD Vault Calculation Example](assets/images/add_calculation_example.png)
 
+### Saving readouts as a template
+When importing experimental data into CDD Vault, field-mapping templates are crucial for efficiency and accuracy. Firstly, these templates expedite the upload process by eliminating the time-consuming task of manually mapping your data file headers to protocol readout definitions. Secondly, using a saved Mapping Template ensures consistency and prevents human error in mapping across different runs.
+
+Watch CDD Vault's tutorial on how to set up a readout as a template.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mqtNqvYtFOw?si=rv9CB0ZO6F-1weN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+For more information, please visit CDD Vault's [knowledge base link](https://support.collaborativedrug.com/hc/en-us/articles/360044568531-Using-Templates-to-Map-Fields-for-Import) on using templates to map fields for import. 
+
 ## Step-by-step guide on importing your data
 **Before iniating the upload process, ensure that the following conditions have been met:**
 
@@ -174,10 +183,15 @@ Calculations are defined as new readouts in existing protocols, based on previou
 + **Step 10**: When the import is finished, review the newly updated data by navigating to the **Run Page**--> **Data Summary** tab. 
 
 ### Non-tabular data
-!!! warning "Please note:"
-    This portion of the webpage is still under construction!
+When you need to upload image files related to a molecule, such as dose-response curves, to CDD Vault, package the images into a single .zip file. 
 
-[CDD Vault database on attaching non-tabular data as .zip files.](https://support.collaborativedrug.com/hc/en-us/articles/7109670098324-Attaching-Files-in-CDD-Vault)
+Additionally, include a master sheet within the .zip file that maps each image to its corresponding data point or molecule. This master sheet ensures that the images are properly associated with their data within the CDD Vault. Refer to the xample for guidance on setting up your master sheet.
+
+Below is an example of how to set up your master sheet mapping to the images in the .zip file. 
+    ![Zip file upload](assets/images/image_with_zip.jpg)
+
+
+For an in-depth tutorial on conducting this upload type, please visit the [CDD Vault database on attaching non-tabular data as .zip files.](https://support.collaborativedrug.com/hc/en-us/articles/7109670098324-Attaching-Files-in-CDD-Vault)
 
 ## Dataset transformation
 This section explains how to modify your dataset to meet the requirements for uploading to CDD Vault. It is essential that your Excel file includes a column labeled **RA #** which corresponds to the READDI Batch ID in CDD Vault. This setup is crucial for the proper mapping of variables and readouts in the system.
